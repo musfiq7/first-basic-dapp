@@ -5,7 +5,7 @@ import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
 import "./App.css";
 
 // The contract address
-const greeterAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+const greeterAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'; //after deployed this account got (deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3)
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
     // If MetaMask exists
     if (typeof window.ethereum !== "undefined") {
       // const provider = new ethers.providers.Web3Provider(window.ethereum); // faced this error -(Error: call revert exception [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ]) , then set jsonrpcprovider instead of web3provider
-      const provider = new ethers.providers.JsonRpcProvider('http://127.0.0.1:8545/'); // faced this error -(Error: call revert exception [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ]) , then set jsonrpcprovider instead of web3provider
+      const provider = new ethers.providers.JsonRpcProvider('http://127.0.0.1:8545/'); // jsonrpcprovider link got when (npx hardhat node) free accounts are got 
       const contract = new ethers.Contract(
         greeterAddress,
         Greeter.abi,
