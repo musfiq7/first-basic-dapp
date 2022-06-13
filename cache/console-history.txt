@@ -1,0 +1,9 @@
+npx hardhatArguments
+clear
+cls
+console.log(await greeter.greet());
+console.log(await greeter.setGreeting('hello bd'));
+console.log(await greeter.greet());
+const greeter = await Greeter.deploy("Hello, Hardhat!");
+console.log(await greeter.greet());
+const Greeter = await hre.ethers.getContractFactory("Greeter");
